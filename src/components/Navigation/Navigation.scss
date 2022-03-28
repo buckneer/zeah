@@ -1,0 +1,35 @@
+
+#mainNav {
+  text-transform: uppercase;
+}
+
+.dropdown-menu {
+  a {
+    color: #FFF;
+    padding: 10px;
+    top: 0 !important;
+
+    &:hover {
+      color: #A3DC00 !important;
+      background-color: #102121 !important;
+    }
+  }
+}
+
+.play-btn {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h5 {
+    color: #FFF;
+
+    &:hover {
+      color: #A3DC00;
+      box-shadow: 0 0 10px #A3DC00;
+    }
+  }
+}
+
+small {
+  color: #A3DC00 !important;
+}

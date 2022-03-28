@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Navigation from "./components/Navigation/Navigation";
+import background from "./assets/img/body-background.jpg";
+import CSS from "csstype";
+
+const bodyStyles : CSS.Properties = {
+    backgroundImage: `url(${background})`,
+    minHeight: '500px',
+    backgroundAttachment: 'cover',
+    backgroundPosition: 'center center'
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div style={bodyStyles} className="App" >
+            <Navigation />
+        </div>
+    );
 }
 
 export default App;

@@ -7,6 +7,10 @@ import CSS from 'csstype';
 
 function Navigation() {
 
+    const navStyle: CSS.Properties = {
+        background: `url(${navbarBg})`,
+        backgroundSize: 'cover'
+    }
 
     const playButtonStyle: CSS.Properties = {
         background: `url(${playBg})`,
@@ -17,14 +21,14 @@ function Navigation() {
     }
 
     return(
-        <nav id="mainNav" style={{'background': `url(${navbarBg})`}}
+        <nav id="mainNav" style={navStyle}
              className="navbar navbar-expand-lg navbar-dark border-primary fixed-top">
             <div className="container-fluid">
                 <div className="navbar-brand d-flex py-2">
 
                     <img src={navLogo} />
-                    <div className="d-md-inline ms-4 mt-2 d-none">
-                        <h5>ZEAH RSPS <br /><small>Play your way</small></h5>
+                    <div className="d-md-inline ms-4 mt-2 d-none fw-bolder">
+                        <h5>ZEAH RSPS <br /><small className="small-brand">Play your way</small></h5>
 
                     </div>
 

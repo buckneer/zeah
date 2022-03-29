@@ -1,0 +1,39 @@
+@import '../../../variables';
+
+.bg-content {
+  min-height: 300px;
+}
+
+.icons-content {
+  margin-top: -80px;
+}
+
+.items-content {
+  img {
+    border: 1px solid #000;
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.item-sellers {
+  font-family: pt sans,sans-serif;
+  font-weight: bold;
+}
+
+.mystery-item {
+
+  border: 1px solid #000;
+  padding: 10px 0px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  background-color: $secondary;
+  &:hover {
+    background-color: #0f2b29;
+  }
+}

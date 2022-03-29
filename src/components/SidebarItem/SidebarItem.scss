@@ -1,8 +1,13 @@
 
 
 .SidebarItem {
-
+  font-family: pt sans,sans-serif;
   border: 1px solid #000;
+  box-shadow: 0 0 20px -5px #000;
+
+  p {
+    color: #8cb1ae !important;
+  }
 
   .sidebar-title {
     text-shadow: 0 0 5px #000;

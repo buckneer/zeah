@@ -11,13 +11,14 @@ import weaponsIc from '../../assets/icons/store-weapons.png';
 import armorIc from '../../assets/icons/store-armor.png';
 import customsIc from '../../assets/icons/store-customs.png';
 import ironmenIc from '../../assets/icons/store-ironmen.png'
-import Home from "../TabElements/Home";
+import Home from "../TabElements/home/Home";
+import Coins from "../TabElements/coins/Coins";
 
 let storeStyles: CSS.Properties = {
     backgroundImage: `url(${contentBg})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center'
+    backgroundSize: 'auto',
+    backgroundRepeat: 'repeat',
+    backgroundPosition: '0% 0%',
 }
 
 
@@ -69,11 +70,11 @@ export default function Store() {
         <div className="Store">
             <div style={storeStyles}  className="store-content container m-5 rounded shadow-lg mx-auto">
                 <div className="row ">
-                    <div className="col-3 my-3">
+                    <div className="col-lg-3 col-12 my-3">
                         {/* Sidebar */}
                         <SidebarItem title="Your Account">
                             <div className="buttons d-flex justify-content-between">
-                                <button className="btn btn-secondary border-white border-2 rounded-0">Login</button>
+                                <button className="btn btn-warning rounded-0">Login</button>
                                 <button className="btn btn-primary rounded-0">Register</button>
                             </div>
                         </SidebarItem>
@@ -91,17 +92,17 @@ export default function Store() {
                             <p className="text-light text-center">You have no items waiting in your collection box.</p>
                         </SidebarItem>
                     </div>
-                    <div className="col-9 my-4">
+                    <div className="col-lg-9 col-12 my-4">
                         <Tab.Container defaultActiveKey="home">
                             <Row>
                                 <Col md={2}>
-                                    <Nav variant="pills" className="flex-column">
+                                    <Nav className="tabs-container flex-column">
                                         {storeTabs && storeTabs.map(storeTab => (
                                             <Nav.Item>
                                                 <Nav.Link className="tab-link" eventKey={storeTab.name}>
                                                     <div className="d-flex">
                                                         <img className="py-4" src={storeTab.icon} alt="home" />
-                                                        <h5 className="ms-2 py-4">{storeTab.name.toUpperCase()}</h5>
+                                                        <h5 className="ms-2 py-4 fw-bold">{storeTab.name.toUpperCase()}</h5>
                                                     </div>
                                                 </Nav.Link>
                                             </Nav.Item>
@@ -113,6 +114,9 @@ export default function Store() {
 
                                         <Tab.Pane eventKey="home">
                                             <Home />
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="coins">
+                                            <Coins />
                                         </Tab.Pane>
 
 

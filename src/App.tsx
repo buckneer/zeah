@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation/Navigation";
 import background from "./assets/img/body-background.jpg";
 import CSS from "csstype";
 import Store from "./components/Store/Store";
+import Footer from "./components/Footer/Footer";
 
 const bodyStyles : CSS.Properties = {
     backgroundImage: `url(${background})`,
@@ -14,9 +15,10 @@ const bodyStyles : CSS.Properties = {
 
 function App() {
     return (
-        <div style={bodyStyles} className="App" >
+        <div style={bodyStyles} className="App overflow-hidden" >
             <Navigation />
             <Store />
+            <Footer />
         </div>
     );
 }

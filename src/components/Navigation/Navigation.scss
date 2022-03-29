@@ -1,6 +1,32 @@
 
 #mainNav {
   text-transform: uppercase;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid #1f423f;
+
+  .nav-item {
+    margin: 0 20px;
+  }
+}
+
+.small-brand {
+  font-size: 13px;
+  font-family: pt sans,sans-serif;
+}
+
+
+.navbar-nav {
+  font-family: pt sans,sans-serif;
+}
+
+.navbar-brand {
+  h5 {
+    color: #dadada !important;
+    font-weight: bold;
+    line-height: 1;
+  }
+
 }
 
 .dropdown-menu {
@@ -17,18 +43,20 @@
 }
 
 .play-btn {
-  background-size: cover;
-  background-repeat: no-repeat;
+
 
   h5 {
     color: #FFF;
-
+    box-shadow: 0 0 10px #A3DC00;
     &:hover {
       color: #A3DC00;
-      box-shadow: 0 0 10px #A3DC00;
+      box-shadow: 0 0 15px #A3DC00;
     }
   }
 }
+
+
+
 
 small {
   color: #A3DC00 !important;

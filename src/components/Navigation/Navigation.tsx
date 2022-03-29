@@ -18,7 +18,7 @@ function Navigation() {
 
     return(
         <nav id="mainNav" style={{'background': `url(${navbarBg})`}}
-             className="navbar navbar-expand-lg navbar-dark border-primary">
+             className="navbar navbar-expand-lg navbar-dark border-primary fixed-top">
             <div className="container-fluid">
                 <div className="navbar-brand d-flex py-2">
 

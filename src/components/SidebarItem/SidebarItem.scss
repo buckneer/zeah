@@ -1,0 +1,11 @@
+
+
+.SidebarItem {
+
+  border: 1px solid #000;
+
+  .sidebar-title {
+    text-shadow: 0 0 5px #000;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+}

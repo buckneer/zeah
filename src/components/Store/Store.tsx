@@ -1,6 +1,6 @@
 import './Store.scss'
 import CSS from 'csstype';
-import contentBg from '../../assets/img/content-bg-pattern.jpg';
+import panelBg from '../../assets/img/panel-bg-pattern.png';
 import SidebarItem from "../SidebarItem/SidebarItem";
 import {Tabs, Tab, Row, Col, Nav} from "react-bootstrap";
 import homeIc from '../../assets/icons/store-home.png';
@@ -15,7 +15,7 @@ import Home from "../TabElements/home/Home";
 import Coins from "../TabElements/coins/Coins";
 
 let storeStyles: CSS.Properties = {
-    backgroundImage: `url(${contentBg})`,
+    backgroundImage: `url(${panelBg})`,
     backgroundSize: 'auto',
     backgroundRepeat: 'repeat',
     backgroundPosition: '0% 0%',

@@ -1,7 +1,65 @@
-
+@import '../../../mixins';
 
 .Coins {
-  .subtitle {
+  .coins-box-container {
 
+    margin-top: 150px;
+
+    .coin-box {
+      font-family: pt sans, sans-serif;
+      border: 1px solid #000;
+      .coin-img {
+        height: 260px;
+
+        .img-container {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+
+          img {
+            display: block;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            object-fit: scale-down;
+          }
+        }
+      }
+
+      .coin-heading {
+        border-top: 1px solid #000;
+      }
+
+      .coin-option {
+        background-color: #0f2b29 !important;
+        margin-top: -16px;
+      }
+
+      .buy-option {
+        border: 1px solid #000;
+        background-color: #0f413c !important;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0f2b29 !important;
+
+          border: 1px solid #A3DC00;
+          p {
+            color: #A3DC00 !important;
+          }
+        }
+        p {
+          font-size: 10px;
+          color: #FFF;
+        }
+      }
+    }
   }
 }

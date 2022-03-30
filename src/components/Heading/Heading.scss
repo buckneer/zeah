@@ -1,3 +1,4 @@
+@import '../../mixins';
 
 .Heading {
 
@@ -13,10 +14,24 @@
     margin-top: -10px;
   }
 
+  .text-heading {
+    font-size: 32px;
+    @include breakpoint(laptop) {
+      font-size: 26px;
+      margin-top: 7px;
+      padding: 10px 20px !important;
+      margin-left: 24px !important;
+    }
+  }
+
+
   .main-subtitle {
     line-height: 1;
     font-family: pt sans,sans-serif;
     font-size: 13px;
+    @include breakpoint(laptop) {
+      margin-top: 15px;
+    }
   }
 
 }

@@ -44,7 +44,7 @@ export default function Heading({title, img, children}: HeadingProps) {
                             <img src={headerLeft} />
                         </div>
                         <div style={headingStyle} className="text-heading-container">
-                            <h1 style={textHeadingStyle} className="py-2 py-2 px-4 text-heading fw-bold ms-3">
+                            <h1 style={textHeadingStyle} className="py-2 px-lg-5 text-heading fw-bold ms-5">
                                 {title}
                             </h1>
                             {children && (

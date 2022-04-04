@@ -1,0 +1,31 @@
+
+
+.StoreItem {
+
+  border: 1px solid #000;
+
+  .store-img-container {
+    min-height: 100px;
+
+
+    img {
+
+      padding: 20px;
+    }
+  }
+
+  .store-description {
+    p {
+      font-size: 12px;
+      font-family: "PT Sans", sans-serif;
+    }
+  }
+
+
+  .btn-small {
+    padding: 5px 2px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+}

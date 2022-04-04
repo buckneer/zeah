@@ -32,4 +32,18 @@ body {
     color: $primary-text !important;
   }
 
+
+
+}
+
+.btn-small {
+  background-color: #0E413C;
+  color: #FFF;
+  border: 1px solid #000;
+  font-size: 12px;
+  &:hover {
+    color: $primary-text;
+    border: 1px solid $primary-text;
+    background-color: $secondary;
+  }
 }

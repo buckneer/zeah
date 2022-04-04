@@ -13,6 +13,8 @@ import customsIc from '../../assets/icons/store-customs.png';
 import ironmenIc from '../../assets/icons/store-ironmen.png'
 import Home from "../TabElements/home/Home";
 import Coins from "../TabElements/coins/Coins";
+import {Bonds} from "../TabElements/bonds/Bonds";
+import Relics from "../TabElements/relics/Relics";
 
 let storeStyles: CSS.Properties = {
     backgroundImage: `url(${panelBg})`,
@@ -92,7 +94,7 @@ export default function Store() {
                             <p className="text-light text-center">You have no items waiting in your collection box.</p>
                         </SidebarItem>
                     </div>
-                    <div className="col-lg-9 col-12 my-4">
+                    <div className="col-lg-9 col-10 my-4">
                         <Tab.Container defaultActiveKey="home">
                             <Row>
                                 <Col md={2}>
@@ -109,7 +111,7 @@ export default function Store() {
                                         ))}
                                     </Nav>
                                 </Col>
-                                <Col className="ms-5" md={9}>
+                                <Col className="ms-5 " md={9}>
                                     <Tab.Content>
 
                                         <Tab.Pane eventKey="home">
@@ -117,6 +119,12 @@ export default function Store() {
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="coins">
                                             <Coins />
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="bonds">
+                                            <Bonds />
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="relics">
+                                            <Relics />
                                         </Tab.Pane>
 
 

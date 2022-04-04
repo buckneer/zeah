@@ -55,7 +55,7 @@ export default function Coins() {
     return(
         <div className="Coins">
             <Heading title={"ZEAH COINS"} img={storeHeaderImg}>
-                <p className="">Zeah Coins are the currency used to buy items on Zeah's store.</p>
+                <p>Zeah Coins are the currency used to buy items on Zeah's store.</p>
                 <p className="notice-sub text-danger">Coins cannot be transferred. All sales are final.</p>
             </Heading>
             <div className="coins-box-container d-flex flex-md-row flex-column justify-content-between">

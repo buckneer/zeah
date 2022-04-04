@@ -1,0 +1,46 @@
+@import '../../variables';
+
+.BondItem {
+  font-family: PT Sans, sans-serif;
+  border-radius: 10px;
+  overflow:hidden;
+  border: 1px solid #000;
+
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .bond-item-title {
+
+    p {
+      font-size: 11px;
+    }
+  }
+
+  .bond-item-options {
+    background-color: #0f2b29;
+
+    .quantity-info {
+      text-align: center;
+    }
+  }
+
+  .bond-item-img {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  
+}

@@ -3,16 +3,24 @@ import './Relics.scss';
 import Heading from "../../Heading/Heading";
 import relicsHeader from "../../../assets/img/store-header-relics.png";
 import StoreItem from "../../StoreItem/StoreItem";
+import Item from "../../../item/item.type";
+import ItemService from "../../../item/item.service";
+import {useEffect, useState} from "react";
 
-export default function Relics() {
+export default function Relics({relics} : {relics: Item[]}) {
+
+
+
+
+
     return(
         <div className="Relics">
             <Heading title={"RELICS"} img={relicsHeader}>
             </Heading>
             <div className="relics-content row">
-                <div className="col-md-3 col-6">
-                    <StoreItem title="String of Luck" price="250 Zeah Coins" description="Offers 10% luck boost, excluding raids. Lasts for 60 minutes." />
-                </div>
+                    {relics && relics.map(item => (
+                        <StoreItem item={item} key={item._id}/>
+                    ))}
             </div>
         </div>
     )

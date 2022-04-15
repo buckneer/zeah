@@ -4,6 +4,7 @@
 
   border: 1px solid #000;
 
+
   .store-img-container {
     min-height: 100px;
 
@@ -18,6 +19,7 @@
     p {
       font-size: 12px;
       font-family: "PT Sans", sans-serif;
+      width: 100%;
     }
   }
 
@@ -26,6 +28,14 @@
     padding: 5px 2px;
     text-decoration: none;
     cursor: pointer;
+  }
+
+
+  .boxes-img-container {
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
 }

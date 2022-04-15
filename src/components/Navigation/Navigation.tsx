@@ -4,6 +4,7 @@ import navbarBg from './navbar-bg.jpeg';
 import navLogo from '../../assets/img/Nav-icon.webp';
 import playBg from '../../assets/img/play-button-bg.jpg';
 import CSS from 'csstype';
+import {NavLink} from "react-router-dom";
 
 function Navigation() {
 
@@ -61,7 +62,7 @@ function Navigation() {
                             <a className="nav-link" href="#">Vote</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Store</a>
+                            <NavLink className="nav-link" to="/store">Store</NavLink>
                         </li>
                     </ul>
 

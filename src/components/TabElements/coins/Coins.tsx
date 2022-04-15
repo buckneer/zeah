@@ -10,48 +10,69 @@ import coinsThree from '../../../assets/img/coins-3.png';
 import coinsFour from '../../../assets/img/coins-4.png';
 import coinsFive from '../../../assets/img/coins-5.png';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useState} from "react";
+import CheckoutModal from "../../Modal/CheckoutModal";
+import CoinBox from "../../CoinBox/CoinBox";
 
-const coinStyle: CSS.Properties = {
-    background: `url(${contentBg}) no-repeat center center`,
-    backgroundSize: 'cover'
+
+
+export interface CoinPackType {
+    id: number,
+    name: string,
+    icon: string,
+    price: string,
+    description: string,
+    quantity: number
 }
 
-
-let coinPacks : {name: string, icon: string, price: string, description: string}[] = [
+let coinPacks : CoinPackType[] = [
     {
+        id: 1,
         name: "1,000 Zeah Coins (+0 bonus)",
         icon: coinsOne,
-        price: "$10",
-        description: "1,000 Zeah Coins will be credited to you upon successful payment."
+        price: "10",
+        description: "1,000 Zeah Coins will be credited to you upon successful payment.",
+        quantity: 1000
     },
     {
+        id: 2,
         name: "2,000 Zeah Coins  (+100 bonus)",
         icon: coinsTwo,
-        price: "$20",
-        description: "2,100 Zeah Coins will be credited to you upon successful payment."
+        price: "20",
+        description: "2,100 Zeah Coins will be credited to you upon successful payment.",
+        quantity: 2000
     },
     {
+        id: 3,
         name: "5,000 Zeah Coins (+375 bonus)",
         icon: coinsThree,
-        price: "$50",
-        description: "5,375 Zeah Coins will be credited to you upon successful payment."
+        price: "50",
+        description: "5,375 Zeah Coins will be credited to you upon successful payment.",
+        quantity: 5000
     },
     {
+        id: 4,
         name: "10,000 Zeah Coins  (+1,000 bonus)",
         icon: coinsFour,
-        price: "$100",
-        description: "11,000 Zeah Coins will be credited to you upon successful payment."
+        price: "100",
+        description: "11,000 Zeah Coins will be credited to you upon successful payment.",
+        quantity: 10000
     },
     {
+        id: 5,
         name: "25,000 Zeah Coins  (+3,125 bonus)",
         icon: coinsFive,
-        price: "$250",
-        description: "28,125 Zeah Coins will be credited to you upon successful payment."
+        price: "250",
+        description: "28,125 Zeah Coins will be credited to you upon successful payment.",
+        quantity: 25000
     },
 
 ]
 
 export default function Coins() {
+
+
+
     return(
         <div className="Coins">
             <Heading title={"ZEAH COINS"} img={storeHeaderImg}>
@@ -60,40 +81,13 @@ export default function Coins() {
             </Heading>
             <div className="coins-box-container d-flex flex-md-row flex-column justify-content-between">
                 {coinPacks && coinPacks.map(pack => (
-                    <div className="coin-box col-4 col-md-2">
-                        <div style={coinStyle} className="coin-img">
-                            <div className="img-container">
-                                <img src={pack.icon} />
-                            </div>
-                        </div>
-                        <div className="coin-options">
-                            <div className="coin-heading bg-primary text-white text-center p-1">
-                                <h6>{pack.name}</h6>
-                            </div>
-                            <div className="coin-body bg-secondary text-muted text-center p-2">
-                                <p className="price-tag text-info">{pack.price}</p>
 
-                                <p className="coins-description">{pack.description}</p>
-                            </div>
-                            <div className="coin-option">
-                                <div className="row d-flex justify-content-center py-2">
-                                    <div className="col-4 buy-option">
-                                        <FontAwesomeIcon className="text-light" icon={faPaypal}/>
-                                        <p>Buy Now</p>
-                                    </div>
-                                    <div className="col-4 buy-option">
-                                        <FontAwesomeIcon className="text-light" icon={faBitcoin}/>
-                                        <p>Buy Now</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    <CoinBox key={pack.id} pack={pack} />
                 ))}
 
 
             </div>
+
         </div>
     )
 }

@@ -5,31 +5,43 @@ import BondItem from "../../BondItem/BondItem";
 import bondImg from "../../../assets/img/example-image.jpeg";
 
 
-type Bond = {
+export type Bond = {
     name: string,
     quantity: number,
+    description: string,
+    price: string
 }
 
 let bonds: Bond[] = [
     {
         name: '$10 Bond (Redeems 1,000 Zeah Coins)',
-        quantity: 1
+        quantity: 1000,
+        description: "Get 1,000 Zeah coins",
+        price: "10"
     },
     {
         name: '$25 Bond (Redeems 2,500 Zeah Coins)',
-        quantity: 1
+        quantity: 2500,
+        price: "25",
+        description: "Get 1,000 Zeah coins"
     },
     {
         name: '$50 Bond (Redeems 5,000 Zeah Coins)',
-        quantity: 1
+        quantity: 5000,
+        description: "Get 1,000 Zeah coins",
+        price: "50"
     },
     {
         name: '$100 Bond (Redeems 10,000 Zeah Coins)',
-        quantity: 1
+        quantity: 10000,
+        description: "Get 1,000 Zeah coins",
+        price: "100"
     },
     {
         name: '$250 Bond (Redeems 25,000 Zeah Coins)',
-        quantity: 1
+        quantity: 25000,
+        description: "Get 1,000 Zeah coins",
+        price: "250"
     }
 ]
 
@@ -43,7 +55,7 @@ export function Bonds() {
             <div className="bond-content row justify-content-center">
                 <div className="col-lg-6 col-10">
                     {bonds && bonds.map(bond => (
-                        <BondItem title={bond.name}  />
+                        <BondItem bond={bond}  />
                     ))}
 
                 </div>

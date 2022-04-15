@@ -34,7 +34,15 @@
     box-shadow: inset 0 0 0 1px #142b2b, 0 0 30px -3px #000 !important;
   }
 
+  .tab-data {
 
+
+    &:hover {
+      h5 {
+        color: #A3DC00 !important;
+      }
+    }
+  }
 
 
 }

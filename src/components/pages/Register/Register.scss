@@ -1,0 +1,33 @@
+@import 'src/variables';
+
+.Register {
+
+  font-family: "PT Sans", sans-serif;
+  padding-top: 90px;
+
+
+  .auth-link {
+    color: #FFF;
+    text-decoration: none;
+    &:hover {
+      color: $primary-text;
+    }
+  }
+
+  .auth-header {
+    border-bottom: 1px solid #000;
+  }
+
+  .auth-container {
+    border: 1px solid #000;
+  }
+
+  .auth-form {
+
+    input {
+      color: #FFF;
+      background-color: $secondary;
+      border: 2px solid $primary;
+    }
+  }
+}

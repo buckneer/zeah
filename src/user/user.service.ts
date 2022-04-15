@@ -24,7 +24,7 @@ export default class UserService {
     }
 
     async getUser() {
-        return axios.get("http://localhost:1337/api/user/", {
+        return axios.get("https://zeah.herokuapp.com/api/user/", {
             headers: this.loggedUserConfig
         })
     }
@@ -32,7 +32,7 @@ export default class UserService {
     async login(data: loginSchema): Promise<UserResponse> {
         let res = {message: "", loggedIn: false}
 
-        await axios.post("http://localhost:1337/api/sessions", data).then(
+        await axios.post("https://zeah.herokuapp.com/api/sessions", data).then(
             response => {
                 if(response.data.success === false) {
                     res = {message: "There was an error", loggedIn: false}
@@ -63,7 +63,7 @@ export default class UserService {
     async register(data: registerSchema) : Promise<UserResponse> {
         let res = {message: "", loggedIn: false}
 
-        await axios.post("http://localhost:1337/api/users", data).then(response => {
+        await axios.post("https://zeah.herokuapp.com/api/users", data).then(response => {
             if(response.data.success === false) {
                 res = {message: "There was a problem", loggedIn: false}
             } else {
@@ -88,7 +88,7 @@ export default class UserService {
 
     async logout() : Promise<boolean> {
         let res = false
-        await axios.delete("http://localhost:1337/api/sessions", {
+        await axios.delete("https://zeah.herokuapp.com/api/sessions", {
             headers: this.loggedUserConfig
         }).then(response => {
             localStorage.removeItem("authAccess");
@@ -102,7 +102,7 @@ export default class UserService {
 
 
     async getCoins() {
-        return axios.get("http://localhost:1337/api/zeah", {
+        return axios.get("https://zeah.herokuapp.com/api/zeah", {
             headers: this.loggedUserConfig
         })
 
@@ -110,7 +110,7 @@ export default class UserService {
 
 
     async addCoins(data: AddCoinsRequest) {
-        return axios.post("http://localhost:1337/api/zeah", data,{
+        return axios.post("https://zeah.herokuapp.com/api/zeah", data,{
             headers: this.loggedUserConfig
         })
     }

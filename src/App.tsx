@@ -21,7 +21,7 @@ function App() {
         <div style={bodyStyles} className="App overflow-hidden" >
             <Router>
                 <Navigation />
-                <Routes>
+                <Routes >
                     <Route path="/store" element={<Store />}/>
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />

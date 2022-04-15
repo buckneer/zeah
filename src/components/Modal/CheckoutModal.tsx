@@ -20,7 +20,7 @@ export default function CheckoutModal({item, show, closeModal} : {item: Checkout
 
 
     const initialOptions = {
-        "client-id": "CLIENT_ID",
+        "client-id": "ASt9Kmc0aKu4gOlHCii8nRDRJAG9VHGJe9p8L37x5EOK168-yOTgnzER7dMiAeQYQsbdVtDYHAZreolX",
         currency: "USD",
         intent: "capture",
     }

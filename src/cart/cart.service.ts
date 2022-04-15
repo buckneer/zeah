@@ -5,7 +5,7 @@ import {CartItem} from "./cart.type";
 
 export default class CartService {
 
-    baseURL = "http://localhost:1337/api/cart"
+    baseURL = "https://zeah.herokuapp.com/api/cart"
 
     getCart() : CartItem[] {
 

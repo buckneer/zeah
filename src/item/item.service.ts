@@ -11,7 +11,7 @@ export default class ItemService {
         "x-refresh": `${localStorage.getItem("authRefresh")}`
     }
 
-    baseURL = "http://localhost:1337/api/items"
+    baseURL = "https://zeah.herokuapp.com/api/items"
 
     getAll() {
 
@@ -28,7 +28,7 @@ export default class ItemService {
 
 
     buyItem(data: buyItemSchema) {
-        return axios.post("http://localhost:1337/api/buy", data, {
+        return axios.post("https://zeah.herokuapp.com/api/buy", data, {
             headers: this.loggedUserConfig
         })
     }
